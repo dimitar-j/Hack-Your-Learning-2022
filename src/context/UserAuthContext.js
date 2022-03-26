@@ -14,11 +14,11 @@ const userAuthContext = createContext();
 export function UserAuthContextProvider({children}) {
     const [user, setUser] = useState("");
     function signup(email, password){
-        return createUserWithEmailAndPassword(firebaseAuth, email, password);
+        return createUserWithEmailAndPassword(firebaseAuth, email, password)
     }
 
     function login(email, password){
-        return signInWithEmailAndPassword(firebaseAuth, email, password);
+        return signInWithEmailAndPassword(firebaseAuth, email, password)
     }
 
     function logout(){
