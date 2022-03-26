@@ -1,11 +1,14 @@
 import './App.css';
 import { Container, Row, Col } from "react-bootstrap";
 import { Routes, Route, } from "react-router-dom";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import Home from "./components/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Home from "./pages/Home";
+import Recipe from "./pages/Recipe";
+import Profile from "./pages/Profile";
+import Feed from "./pages/Feed";
 import { UserAuthContextProvider } from './context/UserAuthContext';
-import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRoute from './pages/ProtectedRoute';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
                 />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup/>} />
+                <Route path="/recipe" element={<Recipe/>} />
+                <Route path="/profile" element={<Profile/>} />
+                <Route path="/feed" element={<Feed/>} />
               </Routes>
             </UserAuthContextProvider>
           </Col>

@@ -4,6 +4,8 @@ import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
 import { useState } from "react";
 import { get, getDatabase, ref, child } from "firebase/database";
+import db from "../firebaseConfig";
+import NavBar from "../components/NavBar"
 
 const Home = () => {
   const { user, logout } = useUserAuth();
@@ -69,6 +71,7 @@ const Home = () => {
         <Button variant="primary" onClick={handleLogout}>
           Log out
         </Button>
+        <NavBar />
       </div>
     </>
   );
