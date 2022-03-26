@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
 import { useState } from "react";
 import db from "../firebaseConfig";
+import NavBar from "../components/NavBar"
 
 const Home = () => {
   const { user, logout } = useUserAuth();
@@ -23,15 +24,11 @@ const Home = () => {
 
   return (
     <>
-      <div className="p-4 box mt-3 text-center">
-        
-        Temp homepage Hack Your Learning 2022 Hackathon<br />
-        Curr email: {user && user.email}
-      </div>
       <div className="d-grid gap-2">
         <Button variant="primary" onClick={handleLogout}>
           Log out
         </Button>
+        <NavBar />
       </div>
     </>
   );
