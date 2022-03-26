@@ -1,0 +1,416 @@
+{
+    "Recipes": {
+        "Breakfast": {
+            "0": {
+                "RecipeName": "Scrambled eggs",
+                "Ingredients": {
+                    "0": {
+                        "quantity": "3",
+                        "name": "Eggs"
+                    },
+                    "1": {
+                        "quantity": "1 tsp",
+                        "name": "Milk"
+                    },
+                    "2": {
+                        "quantity": "1 tbsp",
+                        "name": "Olive Oil"
+                    },
+                    "3": {
+                        "quantity": "1 tsp",
+                        "name": "Salt"
+                    }
+                },
+                "Instructions": {
+                    "0": "Crack the eggs into a medium bowl and add the milk or water. Whisk until smooth and combined, with no streaks of egg white remaining.",
+                    "1": "Brush a small nonstick skillet with olive oil, or melt a little butter in a small nonstick skillet. Bring to medium heat.",
+                    "2": "Pour in the eggs, and let them cook for a few seconds without stirring. Pull a rubber spatula across the bottom of the pan to form large, soft curds of scrambled eggs.",
+                    "3": "Continue cooking over medium-low heat, folding and stirring the eggs every few seconds. Scrape the spatula along the bottom and sides of the pan often to form more curds and to prevent any part of the eggs from drying out.",
+                    "4": "Remove the pan from the heat when the eggs are mostly set, but a little liquid egg remains. Season to taste with salt and pepper and garnish with chopped fresh chives, if desired."
+                },
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FBreakfast%2Fscrambled-eggs-1.jpeg?alt=media&token=fcc7e9a3-e421-41aa-a9a1-b4ebbde55d33",
+                "videoURL": "https://www.youtube.com/watch?v=PUP7U5vTMM0"
+            },
+            "1": {
+                "RecipeName": "French toast",
+                "Ingredients": {
+                    "0": {
+                        "quantity": "2",
+                        "name": "Eggs"
+                    },
+                    "1": {
+                        "quantity": "2/3 Cup",
+                        "name": "Milk"
+                    },
+                    "2": {
+                        "quantity": "6 slices",
+                        "name": "Bread"
+                    },
+                    "3": {
+                        "quantity": "1 tsp",
+                        "name": "Salt"
+                    },
+                    "4": {
+                        "quantity": "1 tbsp",
+                        "name": "Unsalted Butter"
+                    }
+                },
+                "Instructions": {
+                    "0": "Whisk milk, eggs, vanilla, cinnamon, and salt together in a shallow bowl.",
+                    "1": "Lightly butter a griddle and heat over medium-high heat.",
+                    "2": "Dunk bread in the egg mixture, soaking both sides. Transfer to the hot skillet and cook until golden, 3 to 4 minutes per side. Serve hot."
+                },
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FBreakfast%2Ffrench-toast-recipe-1.jpeg?alt=media&token=c834d333-f498-467d-8b96-2b1a6fcc171c",
+                "videoURL": "https://www.youtube.com/watch?v=r1ZLSbQ0r0I"
+            },
+            "2": {
+                "RecipeName": "Blueberry Waffles",
+                "Ingredients": {
+                    "0": {
+                        "quantity": "2 cups",
+                        "name": "Flour"
+                    },
+                    "1": {
+                        "quantity": "1 tbsp",
+                        "name": "Baking Powder"
+                    },
+                    "2": {
+                        "quantity": "2 tbsp",
+                        "name": "Sugar"
+                    },
+                    "3": {
+                        "quantity": "2",
+                        "name": "Eggs"
+                    },
+                    "4": {
+                        "quantity": "1.5 cups",
+                        "name": "Milk"
+                    },
+                    "5": {
+                        "quantity": "5 oz",
+                        "name": "Blueberries"
+                    }
+                },
+                "Instructions": {
+                    "0": "Preheat the waffle iron.",
+                    "1": "In a large bowl, whisk together the dry ingredients.",
+                    "2": "Add the wet ingredients to the dry, and mix until just combined. Mixture will be lumpy.",
+                    "3": "Fold in the blueberries.",
+                    "4": "Spray the waffle iron with baking spray, and cook waffles until light brown and slightly crispy.",
+                    "5": "Serve dusted with powdered sugar and a little maple syrup."
+                },
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FBreakfast%2Ffrench-toast-recipe-1.jpeg?alt=media&token=c834d333-f498-467d-8b96-2b1a6fcc171c",
+                "videoURL": "https://www.youtube.com/watch?v=yyXPbAYq2j0"
+            }
+        },
+        "Lunch": {
+            "0": {
+                "RecipeName": "Chicken Fried Rice",
+                "Ingredients": {
+                    "0": {
+                        "quantity": "2 tbsp",
+                        "name": "Butter"
+                    },
+                    "1": {
+                        "quantity": "3 cups",
+                        "name": "White Rice"
+                    },
+                    "2": {
+                        "quantity": "1 cup",
+                        "name": "Sweet Peas"
+                    },
+                    "3": {
+                        "quantity": "1/2 cup",
+                        "name": "Carrots"
+                    },
+                    "4": {
+                        "quantity": "1",
+                        "name": "Onion"
+                    },
+                    "5": {
+                        "quantity": "2",
+                        "name": "Eggs, Beaten"
+                    },
+                    "6": {
+                        "quantity": "2 tbsp",
+                        "name": "Soy Sauce"
+                    },
+                    "7": {
+                        "quantity": "1 pound",
+                        "name": "Chicken"
+                    },
+                    "8": {
+                        "quantity": "1 tsp",
+                        "name": "Garlic Powder"
+                    }
+                },
+                "Instructions": {
+                    "0": "Melt butter in a large non-stick skillet",
+                    "1": "Add diced onions, sweet peas, and diced carrots. Cook until tender",
+                    "3": "Push vegetables to one side and pour the beaten eggs and scramble until set",
+                    "4": "Mix the eggs and vegetables together. Add garlic powder and soy sauce, stir to mix.",
+                    "5": "Add the cooked rice and chicken, mix well.",
+                    "7": "Optionally top off with green onions and a dash of salt and pepper",
+                    "8": "Enjoy!"
+                },
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FLunch%2FChicken-Fried-Rice-SQ.png?alt=media&token=8b8429d1-e561-4b58-9d69-c82966b21e6e",
+                "videoURL": "https://www.youtube.com/watch?v=7AxydboW8v8"
+            },
+            "1": {
+                "RecipeName": "Caramelized Onion and Mushroom Pizza",
+                "Ingredients": {
+                    "0": {
+                        "quantity": "1 package",
+                        "name": "Dough"
+                    },
+                    "1": {
+                        "quantity": "1 tbsp",
+                        "name": "Olive Oil"
+                    },
+                    "2": {
+                        "quantity": "2 tbsp",
+                        "name": "Butter"
+                    },
+                    "3": {
+                        "quantity": "1 cup",
+                        "name": "Onion, Thinly Sliced"
+                    },
+                    "4": {
+                        "quantity": "1 (8oz) package",
+                        "name": "Sliced Mushrooms"
+                    },
+                    "5": {
+                        "quantity": "2 cloves",
+                        "name": "Garlic Minced or Pressed"
+                    },
+                    "6": {
+                        "quantity": "1 cup",
+                        "name": "Baby Spinach Leaves"
+                    },
+                    "7": {
+                        "quantity": "1 1/2 cups",
+                        "name": "shredded mozzarella cheese"
+                    },
+                    "9": {
+                        "quantity": "1 1/2 cups",
+                        "name": "Shredded Parmesan Cheese"
+                    },
+                    "10": {
+                        "quantity": "1",
+                        "name": "Red Pepper Flakes"
+                    },
+                    "11": {
+                        "quantity": "1",
+                        "name": "Fresh Thyme Leaves"
+                    }
+                },
+                "Instructions": {
+                    "0": "Preheat the oven to 425F",
+                    "1": "Unroll dough with oven-safe parchment paper onto an ungreased large cookie sheet(the dough bakes on the paper)",
+                    "2": "Brush with olive oil and bake for 7 minutes",
+                    "3": "Remove from oven",
+                    "4": "Melt butter in a large non-stick skillet over medium-high heat",
+                    "5": "Once melted, add onions and salt",
+                    "6": "Cook for 5 minutes, stirring occasionally, until onion has started to soften",
+                    "7": "Add mushrooms and cook 7 minutes or until mushrooms and onions are golden brown and soft",
+                    "8": "Stir in garlic and remove from heat",
+                    "9": "Spread mushroom mixture evenly over the toudh",
+                    "10": "Evenly sprinkle with spinach, mozzarella chese and parmesan cheese.",
+                    "11": "Bake for an aditional 7 to 12 minutes or until the cheese is melted and crust is golden brown",
+                    "12": "Garnish with thyme and red pepper flakes"
+                },
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FLunch%2FCaramelized-Onion-and-Mushroom-Pizza-Show-Me-the-Yummy-9%402x.jpeg?alt=media&token=6f5785d3-1351-4623-a5e2-e00d3bc3cd3b",
+                "videoURL": "https://www.epicurious.com/recipes/food/views/wild-mushroom-pizza-with-caramelized-onions-fontina-and-rosemary-230633"
+            },
+            "2": {
+                "RecipeName": "Muffin Tin Lasagna",
+                "Ingredients": {
+                    "0": {
+                        "quantity": "1",
+                        "name": "Large Egg"
+                    },
+                    "1": {
+                        "quantity": "1 carton",
+                        "name": "Ricotta Cheese"
+                    },
+                    "2": {
+                        "quantity": "2 cups",
+                        "name": "Shredded Italian Cheese Blend"
+                    },
+                    "3": {
+                        "quantity": "1 tbsp",
+                        "name": "Olive Oil"
+                    },
+                    "4": {
+                        "quantity": "24",
+                        "name": "Wonton Wrappers"
+                    },
+                    "5": {
+                        "quantity": "1 jar",
+                        "name": "Garden-Style Pasta Sauce"
+                    },
+                    "6": {
+                        "quantity": "1",
+                        "name": "Minced Fresh Parsley"
+                    }
+                },
+                "Instructions": {
+                    "0": "Preheat oven to 375",
+                    "1": " In a bowl, mix egg, ricotta cheese and 1 - 1 1/4 cups Italian cheese blend.",
+                    "2": "Generously grease 12 muffin cups with olive oil. Line each with a wonton wrapper",
+                    "3": "Fill each with 1 tablespoon ricotta mixture and 1 - 1 1/2 tbsp pasta sauce.",
+                    "4": "Top each with a second wrapper, rotating corners and pressing down in the center.",
+                    "5": "Repeat the ricotta and sauce layers for each tin",
+                    "6": "Sprinkle each tin with the remaining cheese blend.",
+                    "7": "Bake until the cheese is melted, 20-25 minutes",
+                    "8": "Sprinkle with parsley and enjoy!"
+                },
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FLunch%2Fmuffin_tin_lasagna.jpeg?alt=media&token=27a3edfa-5875-426d-a7bf-c82165f81c09",
+                "videoURL": "https://www.youtube.com/watch?v=Q0If7DoAG3A"
+            }
+        },
+        "Dinner": {
+            "0": {
+                "RecipeName": "Nachos",
+                "Ingredients": {
+                    "0": {
+                        "quantity": "1",
+                        "name": "Chicken Breast"
+                    },
+                    "1": {
+                        "quantity": "2/3 cups",
+                        "name": "Salsa"
+                    },
+                    "2": {
+                        "quantity": "1 tablespoon",
+                        "name": "Taco Seasoning"
+                    },
+                    "3": {
+                        "quantity": "2/3 cup",
+                        "name": "Black Beans"
+                    },
+                    "4": {
+                        "quantity": "8 ounces",
+                        "name": "Tortilla Chips"
+                    },
+                    "5": {
+                        "quantity": "3 cups",
+                        "name": "Shredded Cheddar"
+                    },
+                    "6": {
+                        "quantity": "4",
+                        "name": "Green Onions"
+                    },
+                    "7": {
+                        "quantity": "1 cup",
+                        "name": "Pico de Gallo"
+                    }
+                },
+                "Instructions": {
+                    "0": "Combine shredded chicken, salso and taco seasoning in a small pan",
+                    "1": "Add salsa and taco seasoning. Cook over medium high heat until through and most of the liquid from the salsa has evaporated",
+                    "2": "Place tortilla chips on a baking sheet. Top with 1/2 of the cheese, chicken, beans, remaining cheese and half of the green onions",
+                    "3": "Bake for 8-10 minutes or until the cheese is melted and bubbly",
+                    "4": "Remove from oven and add pico de gallo and desired toppings. Serve hot!"
+                },
+                "Thumbail": "https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FDinner%2FBlue-Ribbon-Beef-Nachos_EXPS_THJJ21_12416_B02_10_9b.jpeg?alt=media&token=0c8a1edc-4265-48c8-94b6-5c810c74167b",
+                "videoURL": "https://www.youtube.com/watch?v=LgzudBvmd08"
+            },
+            "1": {
+                "RecipeName": "Grilled Rib Eye Steak with Italian Salsa Verde",
+                "Ingredients": {
+                    "0": {
+                        "quantity": "2lbs",
+                        "name": "Flank or skirt steak"
+                    },
+                    "1": {
+                        "quantity": "1/4 cup",
+                        "name": "Orange juice"
+                    },
+                    "2": {
+                        "quantity": "1/4 cup",
+                        "name": "Limes juiced"
+                    },
+                    "3": {
+                        "quantity": "2 tbsp",
+                        "name": "Olive oil"
+                    },
+                    "4": {
+                        "quantity": "8",
+                        "name": "Garlic cloves"
+                    },
+                    "5": {
+                        "quantity": "2 tsp",
+                        "name": "Oregano, Chilli powder, Kosher salt, Cumin"
+                    },
+                    "6" : {
+                        "quantity": "1 tsp",
+                        "name": "Freshly grounded pepper"
+                    },
+                    "7": {
+                        "quantity": "1/4 tsp",
+                        "name": "Cayenne pepper"
+                    }
+                },
+                "Instructions": {
+                    "0": "Whisk the orange juice, lime juice, olive oil, garlic, oregano, chilli powder, salt, cumin, pepper and cayenne into a small bowl.",
+                    "1": "Place the steak in a baking dish or a gallon size ziplock bag and cover it with the marinade until it's fully coated. Refrigerate for 1 to 4 hours",
+                    "3": "Preheat the grill to medium-high heat",
+                    "4": "Discard the extra marinade and season the steak with salt and pepper before placing on the grill",
+                    "5": "Grill the steak for 5-8 minutes per side, depending on the thickness.",
+                    "6": "Remove steaks and allow to rest for 5 minutes. Slice thinly against the grain and serve"
+                },
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FDinner%2Fcarneasada.jpeg?alt=media&token=f95e01bf-afdb-423a-bfce-031307f9b320",
+                "videoURL":  "https://www.youtube.com/watch?v=YhW7nSvLJ9Y"
+            },
+            "2": {
+                "RecipeName": "Pasta Fagioli",
+                "Ingredients": {
+                    "0": {
+                        "quantity": "2 Tbsp",
+                        "name": "Olive Oil"
+                    },
+                    "1": {
+                        "quantity": "1 lb",
+                        "name": "Ground Beef"
+                    },
+                    "2": {
+                        "quantity": "1 cup",
+                        "name": "Yellow Onion"
+                    },
+                    "3": {
+                        "quantity": "1 tbsp",
+                        "name": "Olive Oil"
+                    },
+                    "4": {
+                        "quantity": "6 tbsp",
+                        "name": "Butter"
+                    },
+                    "5": {
+                        "quantity": "5 0",
+                        "name": "Fresh blueberries"
+                    },
+                    "6": {
+                        "quantity": "1",
+                        "name": "minced fresh parsley, optional"
+                    }
+                },
+                "Instructions": {
+                    "0": "Saute beef then add to crock pot. Saute onion then garlic and add to crock pot.",
+                    "1": "Add remaining ingredients up to and including salt and pepper.",
+                    "2": "Cook on low heat 4 hours. Cook pasta separately on stovetop near the end of cooking.",
+                    "3": "Add beans and parsley to soup and serve warm."
+                },
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FDinner%2Fpasta-fagioli-30.jpeg?alt=media&token=4f983550-c700-4105-b9cc-39a3c600e22e",
+                "videoURL": "https://www.youtube.com/watch?v=-lWEeZbBsG0"
+            }
+        }
+    },
+    "Users": {
+        "hK3itXY5efQGYoeWK20T4fxPje92": {
+            "FirstName": "Ajay",
+            "LastName": "Arumugam",
+            "Total Points": 190
+        }
+    }
+}
