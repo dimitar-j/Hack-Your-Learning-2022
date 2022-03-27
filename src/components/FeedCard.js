@@ -9,42 +9,42 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import IconButton from '@mui/material/IconButton';
 import CardActions from '@mui/material/CardActions';
-
-function FoodCard() {
-    return(
-        <>
-            <Card sx={{ maxWidth: 345 }}>
-            <CardHeader style={{ textAlign: 'left' }}
-                avatar={
-                <Avatar sx={{ bgcolor: '#613DC1' }} aria-label="recipe">
-                    BN
-                </Avatar>
-                }
-                title="Rib Eye Steak"
-                subheader="March 26, 2022"
-            />
-            <CardMedia
-                component="img"
-                height="194"
-                image="https://firebasestorage.googleapis.com/v0/b/hack-your-learning-2022.appspot.com/o/RecipeName%2FDinner%2Fcarneasada.jpeg?alt=media&token=f95e01bf-afdb-423a-bfce-031307f9b320"
-                alt="Rib Eye Steak"
-            />
-            <CardContent>
-                <CardActions disableSpacing>
-                    <IconButton style={{ textAlign: 'left' }} aria-label="add to favorites">
-                        <FavoriteIcon />
-                    </IconButton>
-                    <IconButton aria-label="share">
-                        <ShareIcon />
-                    </IconButton>
-                </CardActions>
-                <Typography variant="body4">
-                    Brian Nguyen made Rib Eye Steaks! Yummy!
-                </Typography>
-            </CardContent>
-            </Card>
-        </>
-    )
+ 
+function FeedCard(props) {
+ 
+   return(
+       <>
+           <Card sx={{ maxWidth: 345, mb: 5}}>
+           <CardHeader style={{ textAlign: 'left' }}
+               avatar={
+               <Avatar sx={{ bgcolor: '#613DC1' }} aria-label="recipe">
+                   {props.initials}
+               </Avatar>
+               }
+               title={props.food}
+               subheader={props.date}
+           />
+           <CardMedia
+               component="img"
+               height="194"
+               image={props.image}
+           />
+           <CardContent>
+               <CardActions disableSpacing>
+                   <IconButton style={{ textAlign: 'left' }} aria-label="add to favorites">
+                       <FavoriteIcon />
+                   </IconButton>
+                   <IconButton aria-label="share">
+                       <ShareIcon />
+                   </IconButton>
+                   </CardActions>
+                   <Typography variant="body4">
+                       {props.description}
+                   </Typography>
+               </CardContent>
+           </Card>
+       </>
+   )
 }
-
-export default FoodCard
+ 
+export default FeedCard
