@@ -15,28 +15,43 @@ function NavBar() {
     const stylingObject = {
         navbar:{
             backgroundColor: '#4E148C',
+            padding: '15px'
         },
-        icons:{
+        iconBig:{
             color: '#FAFAFA',
+            fontSize: '2.5em'
+        },
+        iconSmall:{
+            color: '#FAFAFA',
+            fontSize: '1.75em'
         }
     }
 
     return(
         <>
-            <BottomNavigation sx={{width: '100%', borderRadius: 2}} style={stylingObject.navbar}>
-                <BottomNavigationAction
-                    onClick={() => handleClick("/Feed")}
-                    icon={<ArticleIcon style={stylingObject.icons}/>} 
-                />
-                <BottomNavigationAction 
-                    onClick={() => handleClick("/")}
-                    icon={<HomeIcon style={stylingObject.icons}/>} 
-                />
-                <BottomNavigationAction 
-                    onClick={() => handleClick("/Profile")}
-                    icon={<PersonIcon style={stylingObject.icons}/>} 
-                />
-            </BottomNavigation>
+            <div className='navbar'>
+                <BottomNavigation 
+                    sx={{
+                        width: '85%', 
+                        borderRadius: 3,
+                        boxShadow: 3
+                    }} 
+                    style={stylingObject.navbar
+                }>
+                    <BottomNavigationAction
+                        onClick={() => handleClick("/Feed")}
+                        icon={<ArticleIcon style={stylingObject.iconSmall}/>} 
+                    />
+                    <BottomNavigationAction 
+                        onClick={() => handleClick("/")}
+                        icon={<HomeIcon style={stylingObject.iconBig}/>} 
+                    />
+                    <BottomNavigationAction 
+                        onClick={() => handleClick("/Profile")}
+                        icon={<PersonIcon style={stylingObject.iconSmall}/>} 
+                    />
+                </BottomNavigation>
+            </div>
         </>
     )
 }
