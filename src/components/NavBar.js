@@ -17,7 +17,8 @@ function NavBar() {
             backgroundColor: '#4E148C',
             padding: '15px',
             position: 'fixed',
-            bottom: 20
+            bottom: 20,
+            width: "80%"
         },
         iconBig:{
             color: '#FAFAFA',

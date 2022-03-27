@@ -13,7 +13,9 @@ const stylingObject = {
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    gap: "20px"
+    gap: "20px",
+    width: "95%",
+    paddingLeft: "10px"
   },
   subtitle: {
     color: "#613DC1",
