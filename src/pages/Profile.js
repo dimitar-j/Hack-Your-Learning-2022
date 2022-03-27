@@ -18,8 +18,10 @@ const Profile = () => {
 
   return (
     <>
-      <div>
-        Profile Page
+      <div className="d-grid gap-2">
+        <Button variant="primary" onClick={handleLogout}>
+          Log out
+        </Button>
       </div>
     </>
   );
