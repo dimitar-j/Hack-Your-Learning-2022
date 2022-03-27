@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Recipe from "./pages/Recipe";
 import Profile from "./pages/Profile";
 import Feed from "./pages/Feed";
+import WebcamCapture from "./pages/WebcamCapture";
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './pages/ProtectedRoute';
 
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/recipe" element={<Recipe/>} />
                 <Route path="/profile" element={<Profile/>} />
                 <Route path="/feed" element={<Feed/>} />
+                <Route path="/uploadphoto" element={<WebcamCapture/>} />
               </Routes>
             </UserAuthContextProvider>
           </Col>
