@@ -10,7 +10,6 @@ import Feed from "./pages/Feed";
 import WebcamCapture from "./pages/WebcamCapture";
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './pages/ProtectedRoute';
-import { createTheme } from '@mui/system';
 
 function App() {
   return (
@@ -20,20 +19,48 @@ function App() {
           <Col>
             <UserAuthContextProvider>
               <Routes>
+                <Route path="/login" element={<Login />}/>
+                <Route path="/signup" element={<Signup/>} />
                 <Route
                   path="/"
                   element={
                   <ProtectedRoute>
                     <Home/>
                   </ProtectedRoute>
-                } 
+                  } 
                 />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup/>} />
-                <Route path="/recipe" element={<Recipe/>} />
-                <Route path="/profile" element={<Profile/>} />
-                <Route path="/feed" element={<Feed/>} />
-                <Route path="/uploadphoto" element={<WebcamCapture/>} />
+                <Route 
+                  path="/recipe"
+                  element={
+                  <ProtectedRoute>
+                    <Recipe/>
+                  </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/profile"
+                  element={
+                  <ProtectedRoute>
+                    <Profile/>
+                  </ProtectedRoute>
+                  }
+                />
+                <Route 
+                  path="/feed"
+                  element={
+                  <ProtectedRoute>
+                    <Feed/>
+                  </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/uploadphoto" 
+                  element={
+                  <ProtectedRoute>
+                    <WebcamCapture/>
+                  </ProtectedRoute>
+                  }
+                />
               </Routes>
             </UserAuthContextProvider>            
           </Col>
