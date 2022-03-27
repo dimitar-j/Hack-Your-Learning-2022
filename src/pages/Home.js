@@ -7,8 +7,7 @@ import { StepLabel, Stepper, Step } from "@mui/material";
 import DiamondIcon from "@mui/icons-material/Diamond";
 import NavBar from "../components/NavBar"
 import FoodItem from "../components/FoodItem"
-import Grid from '@mui/material/Grid';
-import { fontSize } from "@mui/system";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const stylingObject = {
   bannerContainer: {
@@ -46,6 +45,23 @@ const stylingObject = {
     fontSize: "30px"
   }
 }
+
+const theme = createTheme({
+  components: {
+    MuiStepIcon: {
+      styleOverrides: {
+        root: {
+          "&.Mui-completed": {
+            color: "#613DC1"
+          },
+          "&.Mui-active": {
+            color: "#613DC1"
+          }
+        }
+      }
+    }
+  }
+});
 
 const Home = () => {
   const { user, logout } = useUserAuth();
@@ -105,7 +121,7 @@ const Home = () => {
   ]
   
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <div style={stylingObject.bannerContainer}>
         Welcome Back, {users.length != 0 ? users[user.uid].FirstName : ""}<br/>
         {/* Temp homepage Hack Your Learning 2022 Hackathon<br />
@@ -167,7 +183,7 @@ const Home = () => {
       <div>
         <NavBar />
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

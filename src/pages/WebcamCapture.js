@@ -1,10 +1,13 @@
+import { getStorage } from "@firebase/storage";
 import React from "react";
 import Webcam from "react-webcam";
+import { uploadString, ref, child, getDownloadURL } from "firebase/storage";
+import axios from "axios";
+import { useLocation, useNavigate } from "react-router";
 import { Dialog, DialogTitle } from "@mui/material";
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import CheckIcon from '@mui/icons-material/Check';
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router";
 
 const WebcamCapture = () => {
     const videoConstraints = {
@@ -29,12 +32,33 @@ const WebcamCapture = () => {
         height: "800px",
       }
     }
-    
+    const [isValid, setIsValid] = React.useState(null);
+    const { search } = useLocation();
+    const searchParams = new URLSearchParams(search);
+    const recipeParam = searchParams.get("name");
+    const words = recipeParam.split(" ");
+  
     const capture = React.useCallback(() => {
-      const imageSrc = webcamRef.current.getScreenshot();
-      setOpen(true);
       setWebCamOn(false)
+      const imageSrc = webcamRef.current.getScreenshot();
+      const db = getStorage();
+      const dbRef = ref(db, "child.png");
+      uploadString(dbRef, imageSrc.substring(23), "base64").then((snapshot) => {
+        console.log("uploaded image");
+        getDownloadURL(snapshot.ref).then((downloadURL) => {
+          console.log('File available at', downloadURL);
+          const response = axios.post(
+            'http://localhost:3001/image-checker',
+            { imageURL: downloadURL, words: words },
+            { headers: { 'Content-Type': 'application/json' } }
+          ).then((data) => {
+            console.log(data.data);
+            setIsValid(data.data.match);
+          }) 
+        });
+      });
       setImgSrc(imageSrc);
+      
     }, [webcamRef, setImgSrc]);
     
     function SimpleDialog(props) {
@@ -79,7 +103,7 @@ const WebcamCapture = () => {
         {webCamOn && <Button onClick={capture} style={{backgroundColor: "#613DC1"}}>Capture photo</Button>}
         <div>
           {imgSrc && (<img src={imgSrc}/>)}
-          {open && 
+          {isValid && 
             <SimpleDialog
               selectedValue={selectedValue}
               open={open}
@@ -87,6 +111,7 @@ const WebcamCapture = () => {
             />
           }
         </div>
+          <h2>{isValid}</h2>
       </div>
     );
 };
