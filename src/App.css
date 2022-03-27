@@ -47,6 +47,7 @@ body {
 .box {
   border: 1px solid #dfdfdf;
   background-color: #fff;
+  margin-top: 50%;
 }
 
 .g-btn {

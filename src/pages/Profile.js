@@ -2,6 +2,9 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import DiamondIcon from '@mui/icons-material/Diamond';
+
 
 const Profile = () => {
   const { user, logout } = useUserAuth();
@@ -18,11 +21,14 @@ const Profile = () => {
 
   return (
     <>
-      <div className="d-grid gap-2">
-        <Button variant="primary" onClick={handleLogout}>
-          Log out
-        </Button>
-      </div>
+      <AccountCircleIcon data-testid="AccountCircleIcon" sx={{fontSize:100}} />
+      <br/>
+      Ajay Arumugam
+      250 <DiamondIcon/>
+      <br/>
+      <Button variant="primary" onClick={handleLogout}>
+        Log out
+      </Button>
     </>
   );
 };

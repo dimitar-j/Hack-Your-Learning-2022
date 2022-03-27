@@ -25,7 +25,6 @@ function NavBar() {
             color: '#FAFAFA',
             fontSize: '1.75em'
         }
-
     }
 
     return(
