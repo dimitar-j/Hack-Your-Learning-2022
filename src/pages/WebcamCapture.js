@@ -39,7 +39,8 @@ const WebcamCapture = () => {
     const words = recipeParam.split(" ");
   
     const capture = React.useCallback(() => {
-      setWebCamOn(false)
+      setWebCamOn(false);
+      setOpen(true);
       const imageSrc = webcamRef.current.getScreenshot();
       const db = getStorage();
       const dbRef = ref(db, "child.png");
@@ -62,7 +63,15 @@ const WebcamCapture = () => {
     }, [webcamRef, setImgSrc]);
     
     function SimpleDialog(props) {
-      const{onClose, selectedValue, open} = props
+      const { onClose, selectedValue, open } = props;
+    
+      const handleClose = () => {
+        onClose(selectedValue);
+      };
+    
+      const handleListItemClick = (value) => {
+        onClose(value);
+      };
       
     return (
         <Dialog
@@ -74,16 +83,39 @@ const WebcamCapture = () => {
           </DialogTitle>
         </Dialog>
       )
-    }
+    };
+
+    function SimpleDialog2(props) {
+      const { onClose, selectedValue, open } = props;
+    
+      const handleClose = () => {
+        onClose(selectedValue);
+      };
+    
+      const handleListItemClick = (value) => {
+        onClose(value);
+      };
+      
+    return (
+        <Dialog
+          onClose={handleClose}
+          open={open}
+        >
+          <DialogTitle>
+            You suck<CheckIcon />
+          </DialogTitle>
+        </Dialog>
+      )
+    };
 
     const handleClick = (URL) =>{
       navigate(URL);
     }
 
     const handleClose = (value) => {
-      setOpen(false);
-      setSelectedValue(value)
-    }
+    setOpen(false);
+    setSelectedValue(value);
+    };
 
     return (
       <div style={stylingObject.container}>
@@ -105,6 +137,13 @@ const WebcamCapture = () => {
           {imgSrc && (<img src={imgSrc}/>)}
           {isValid && 
             <SimpleDialog
+              selectedValue={selectedValue}
+              open={open}
+              onClose={handleClose}
+            />
+          }
+          {!isValid && 
+            <SimpleDialog2
               selectedValue={selectedValue}
               open={open}
               onClose={handleClose}
