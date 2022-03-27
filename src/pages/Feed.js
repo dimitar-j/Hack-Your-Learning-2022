@@ -34,6 +34,7 @@ const Feed = () => {
       <ChevronLeftIcon 
         sx={{fontSize:'70px', mr: 50}}
         onClick={() => handleClick("/")}
+        style={{marginTop:"20px"}}
       />
 
       <div className="leaderboard">

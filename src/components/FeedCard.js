@@ -13,7 +13,7 @@ import CardActions from '@mui/material/CardActions';
 function FoodCard() {
     return(
         <>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345, boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" }}>
             <CardHeader style={{ textAlign: 'left' }}
                 avatar={
                 <Avatar sx={{ bgcolor: '#613DC1' }} aria-label="recipe">

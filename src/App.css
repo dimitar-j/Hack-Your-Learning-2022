@@ -70,7 +70,7 @@ body {
 .leaderboard{
   border: #E1E1E1 solid 1px;
   border-radius: 10px;
-  box-shadow: 1px 5px #E1E1E1;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
   height: 180px;
   width: 350px;
   text-align: left;
@@ -87,7 +87,7 @@ body {
 
 .leaderboard-points {
   position: absolute;
-  top: 147px;
+  top: 160px;
   left: 300px;
   text-align: right;
 }

@@ -44,6 +44,7 @@ const Profile = () => {
       <ChevronLeftIcon 
         sx={{fontSize:'70px', mr: 50}}
         onClick={() => handleClick("/")}
+        style={{marginTop:"20px"}}
       />
       <AccountCircleIcon data-testid="AccountCircleIcon" style={stylingObject.profile} />
       <br/>

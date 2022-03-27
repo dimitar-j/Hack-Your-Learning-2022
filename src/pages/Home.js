@@ -138,7 +138,7 @@ const Home = () => {
       <br></br>
       <div style={{display:"flex", gap: "20px", overflowX: "auto", padding: "10px"}}>
         {recipes.Breakfast.map((item, index) => 
-            <FoodItem recipe={item}></FoodItem>
+            <FoodItem recipe={item} mealType="Breakfast"></FoodItem>
         )}
       </div>
       <br></br>
@@ -148,7 +148,7 @@ const Home = () => {
       <br></br>
       <div style={{display:"flex", gap: "10px", overflowX: "auto", padding: "10px"}}>
         {recipes.Lunch.map((item, index) => 
-            <FoodItem recipe={item}></FoodItem>
+            <FoodItem recipe={item} mealType="Lunch"></FoodItem>
         )}
       </div>
       <br></br>
@@ -158,7 +158,7 @@ const Home = () => {
       <br></br>
       <div style={{display:"flex", gap: "10px", overflowX: "auto", padding: "10px"}}>
         {recipes.Dinner.map((item, index) => 
-            <FoodItem recipe={item}></FoodItem>
+            <FoodItem recipe={item} mealType="Dinner"></FoodItem>
         )}
       </div>
       <br></br>
