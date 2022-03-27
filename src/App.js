@@ -1,5 +1,5 @@
 import './App.css';
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, ThemeProvider } from "react-bootstrap";
 import { Routes, Route, } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -10,10 +10,11 @@ import Feed from "./pages/Feed";
 import WebcamCapture from "./pages/WebcamCapture";
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './pages/ProtectedRoute';
+import { createTheme } from '@mui/system';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{padding: "0px 20px"}}>
       <Container>
         <Row>
           <Col>
@@ -34,7 +35,7 @@ function App() {
                 <Route path="/feed" element={<Feed/>} />
                 <Route path="/uploadphoto" element={<WebcamCapture/>} />
               </Routes>
-            </UserAuthContextProvider>
+            </UserAuthContextProvider>            
           </Col>
         </Row>
       </Container>
