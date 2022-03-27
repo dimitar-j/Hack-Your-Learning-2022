@@ -1,5 +1,5 @@
 import React from 'react'
-import { BottomNavigation, Link } from '@mui/material'
+import { BottomNavigation } from '@mui/material'
 import { BottomNavigationAction } from '@mui/material';
 import ArticleIcon from '@mui/icons-material/Article';
 import PersonIcon from '@mui/icons-material/Person';
@@ -8,23 +8,33 @@ import { useNavigate } from 'react-router';
 
 function NavBar() {
     let navigate = useNavigate();
-
     const handleClick = (URL) => {
         navigate(URL);
     }
 
+    const stylingObject = {
+        navbar:{
+            backgroundColor: '#4E148C',
+        },
+        icons:{
+            color: '#FAFAFA',
+        }
+    }
+
     return(
         <>
-            <BottomNavigation>
+            <BottomNavigation sx={{width: '100%', borderRadius: 2}} style={stylingObject.navbar}>
                 <BottomNavigationAction
                     onClick={() => handleClick("/Feed")}
-                    icon={<ArticleIcon />} 
+                    icon={<ArticleIcon style={stylingObject.icons}/>} 
                 />
                 <BottomNavigationAction 
-                    icon={<HomeIcon/>} 
+                    onClick={() => handleClick("/")}
+                    icon={<HomeIcon style={stylingObject.icons}/>} 
                 />
                 <BottomNavigationAction 
-                    icon={<PersonIcon/>} 
+                    onClick={() => handleClick("/Profile")}
+                    icon={<PersonIcon style={stylingObject.icons}/>} 
                 />
             </BottomNavigation>
         </>

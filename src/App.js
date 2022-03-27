@@ -10,6 +10,7 @@ import Feed from "./pages/Feed";
 import WebcamCapture from "./pages/WebcamCapture";
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './pages/ProtectedRoute';
+import { useState } from "react";
 
 function App() {
   return (

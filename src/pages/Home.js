@@ -110,7 +110,7 @@ const Home = () => {
       <div style={stylingObject.subtitle}>
         Dinner
       </div>
-      <div className="d-grid gap-2">
+      <div>
         <NavBar />
       </div>
     </>
