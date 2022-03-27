@@ -1,8 +1,23 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
+
+app.use((req, res, next) => {
+  console.log("asd");
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
+    next();
+});
 
 /* GET home page. */
-router.get('/image-checker', function(req, res, next) {
+app.post('/image-checker', (req, res, next) => {
+  console.log("here");
   const Clarifai = require('clarifai');
 
   const {ClarifaiStub, grpc} = require("clarifai-nodejs-grpc");
@@ -36,18 +51,20 @@ router.get('/image-checker', function(req, res, next) {
         console.log("Predicted concepts:");
         for (var word of words) {
           for (const concept of output.data.concepts) {
-            if (concept.name.toLowerCase().includes(word.toLowerCase())) {
+            console.log(word.toLowerCase(), concept.name.toLowerCase());
+            console.log(word.toLowerCase().includes(concept.name.toLowerCase()));
+            if (concept.name.toLowerCase().includes(word.toLowerCase()) || word.toLowerCase().includes(concept.name.toLowerCase())) {
               if (concept.value > 0.8) {
-                res.send({ "match": "True" });
+                res.send({ "match": true });
                 return;
               }
             }
-            console.log(concept.name.toLowerCase() + " " + word.toLowerCase());
+            console.log(concept.name + " " + concept.value);
           }
         }
-        res.send({"match": "False"})
+        res.send({"match": false})
     }
   );
 });
 
-module.exports = router;
+module.exports = app;
