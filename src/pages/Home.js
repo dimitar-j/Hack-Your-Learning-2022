@@ -1,19 +1,20 @@
 import React, { useEffect } from "react";
-import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
 import { useState } from "react";
 import { get, getDatabase, ref, child } from "firebase/database";
-import db from "../firebaseConfig";
+import { StepLabel, Stepper, Step } from "@mui/material";
+import DiamondIcon from "@mui/icons-material/Diamond";
 import NavBar from "../components/NavBar"
 import FoodItem from "../components/FoodItem"
 import Grid from '@mui/material/Grid';
+import { fontSize } from "@mui/system";
 
 const stylingObject = {
   bannerContainer: {
     height: "100px",
     textAlign: "left",
-    padding: "100px 0",
+    padding: "60px 0",
     fontSize: "28px",
     borderBottom: "3px solid #613DC1",
     marginBottom: "50px",
@@ -30,6 +31,19 @@ const stylingObject = {
     textAlign: "left",
     fontSize: "18px",
     fontWeight: "300"
+  },
+
+  progress: {
+    marginBottom: "30px",
+  },
+
+  progressSpot: {
+    iconColor: "#858AE3"
+  },
+
+  points: {
+    color: "#613DC1",
+    fontSize: "30px"
   }
 }
 
@@ -82,6 +96,13 @@ const Home = () => {
       </div>
     )
   }
+
+  const steps = [
+    'Mar 24th',
+    'Mar 25th',
+    'Mar 26th',
+    'Mar 27th'
+  ]
   
   return (
     <>
@@ -91,6 +112,22 @@ const Home = () => {
         Curr email: {user && user.email}<br/>
         First breakfast recipe name:{recipes.length != 0 ? recipes.Breakfast[0].RecipeName : ""} */}
       </div>
+      <p className="progress-count">
+        Your progress: 75 <DiamondIcon style={stylingObject.points}/>
+      </p>
+      <Stepper 
+        activeStep={3} 
+        alternativeLabel
+        style={stylingObject.progress}
+      >
+        {steps.map((label) => (
+          <Step 
+            key={label}
+          >
+            <StepLabel>{label}</StepLabel>
+          </Step>
+        ))}
+      </Stepper>
       <div style={stylingObject.title}>
         What do you want to cook today?
       </div>
@@ -127,7 +164,7 @@ const Home = () => {
       <br></br>
       <br></br>
       <br></br>
-      <div className="d-grid gap-2">
+      <div>
         <NavBar />
       </div>
     </>

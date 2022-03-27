@@ -47,6 +47,7 @@ body {
 .box {
   border: 1px solid #dfdfdf;
   background-color: #fff;
+  margin-top: 50%;
 }
 
 .g-btn {
@@ -59,4 +60,50 @@ body {
 .g-btn > div > svg {
   width: 40px !important;
   height: 38px !important;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+}
+
+.leaderboard{
+  border: #E1E1E1 solid 1px;
+  border-radius: 10px;
+  box-shadow: 1px 5px #E1E1E1;
+  height: 180px;
+  width: 350px;
+  text-align: left;
+  padding-left: 15px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.leaderboard > h2 {
+  font-weight: bold;
+  border-bottom: 2px solid #613DC1;
+  width: 95%;
+}
+
+.leaderboard-points {
+  position: absolute;
+  top: 147px;
+  left: 300px;
+  text-align: right;
+}
+
+.icon-purple {
+  color: '#613DC1';
+}
+
+.banner-image {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.progress-count {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 30px;
 }

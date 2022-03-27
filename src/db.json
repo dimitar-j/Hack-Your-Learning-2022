@@ -408,9 +408,24 @@
     },
     "Users": {
         "hK3itXY5efQGYoeWK20T4fxPje92": {
+            "FirstName": "Brian",
+            "LastName": "Nguyen",
+            "TotalPoints": 190
+        },
+        "tgb0tmXbZuQ9cnCpOnsUICu4xcz2": {
             "FirstName": "Ajay",
             "LastName": "Arumugam",
-            "Total Points": 190
+            "TotalPoints": 250
+        },
+        "m0GK5faFc8TKHuf45gP5PVk5UnH2": {
+            "FirstName": "Dimitar",
+            "LastName": "Janevski",
+            "TotalPoints": "5"
+        },
+        "QrhaWcD9rAcgOhV1ADU8nAXpQyR2": {
+            "FirstName": "Topan",
+            "LastName": "Budiman",
+            "TotalPoints": 712
         }
     }
 }
