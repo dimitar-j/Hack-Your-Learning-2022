@@ -35,6 +35,7 @@ const Feed = () => {
         sx={{fontSize:'70px', mr: 50}}
         onClick={() => handleClick("/")}
       />
+
       <div className="leaderboard">
         <h2>Leaderboard</h2>
             <p>
@@ -52,6 +53,8 @@ const Feed = () => {
               50<DiamondIcon style={stylingObject.points}/><br/>
             </p>
       </div>
+      <br/>
+      <br/>
       <FeedCard />
     </>
   );

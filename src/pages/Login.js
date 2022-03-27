@@ -5,8 +5,6 @@ import Button from '@mui/material/Button';
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../context/UserAuthContext";
 
-import LockIcon from '@mui/icons-material/Lock';
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
