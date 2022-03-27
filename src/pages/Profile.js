@@ -49,7 +49,7 @@ const Profile = () => {
       <AccountCircleIcon data-testid="AccountCircleIcon" style={stylingObject.profile} />
       <br/>
       Dimitar Janevski
-      75 <DiamondIcon style={stylingObject.points}/>
+      150 <DiamondIcon style={stylingObject.points}/>
       <br/>
       <br/>
       <Button variant="contained" style={stylingObject.button} onClick={handleLogout}>
