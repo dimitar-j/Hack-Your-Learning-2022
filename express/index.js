@@ -49,17 +49,19 @@ app.post('/image-checker', (req, res, next) => {
         let words = req.body.words;
         console.log(words);
         console.log("Predicted concepts:");
+
+        for (const concept of output.data.concepts) {
+          console.log(concept.name + " " + concept.value);
+        }
+        
         for (var word of words) {
           for (const concept of output.data.concepts) {
-            console.log(word.toLowerCase(), concept.name.toLowerCase());
-            console.log(word.toLowerCase().includes(concept.name.toLowerCase()));
             if (concept.name.toLowerCase().includes(word.toLowerCase()) || word.toLowerCase().includes(concept.name.toLowerCase())) {
               if (concept.value > 0.8) {
                 res.send({ "match": true });
                 return;
               }
             }
-            console.log(concept.name + " " + concept.value);
           }
         }
         res.send({"match": false})

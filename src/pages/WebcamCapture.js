@@ -8,6 +8,7 @@ import { Dialog, DialogTitle } from "@mui/material";
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import CheckIcon from '@mui/icons-material/Check';
 import { Button } from "react-bootstrap";
+import DangerousIcon from '@mui/icons-material/Dangerous';
 
 const WebcamCapture = () => {
     const videoConstraints = {
@@ -40,7 +41,6 @@ const WebcamCapture = () => {
   
     const capture = React.useCallback(() => {
       setWebCamOn(false);
-      setOpen(true);
       const imageSrc = webcamRef.current.getScreenshot();
       const db = getStorage();
       const dbRef = ref(db, "child.png");
@@ -55,6 +55,7 @@ const WebcamCapture = () => {
           ).then((data) => {
             console.log(data.data);
             setIsValid(data.data.match);
+            setOpen(true);
           }) 
         });
       });
@@ -73,37 +74,32 @@ const WebcamCapture = () => {
         onClose(value);
       };
       
-    return (
+      if (isValid) {
+        return (
+          <Dialog
+            onClose={handleClose}
+            open={open}
+          >
+            <DialogTitle>
+              Good job! You earned 50 points.
+            </DialogTitle>
+            <div style = {{display: "flex", justifyContent: "center", padding: "30px"}}>
+              <CheckIcon sx={{width:"65px", height: "65px", color: "green"}}></CheckIcon>
+            </div>
+          </Dialog>
+        )
+      }
+      return (
         <Dialog
           onClose={handleClose}
           open={open}
         >
           <DialogTitle>
-            Good job<CheckIcon />
+            Not Quite. Double Check the recipe and try again!
           </DialogTitle>
-        </Dialog>
-      )
-    };
-
-    function SimpleDialog2(props) {
-      const { onClose, selectedValue, open } = props;
-    
-      const handleClose = () => {
-        onClose(selectedValue);
-      };
-    
-      const handleListItemClick = (value) => {
-        onClose(value);
-      };
-      
-    return (
-        <Dialog
-          onClose={handleClose}
-          open={open}
-        >
-          <DialogTitle>
-            You suck<CheckIcon />
-          </DialogTitle>
+          <div style = {{display: "flex", justifyContent: "center", padding: "20px"}}>
+            <DangerousIcon sx={{width:"65px", height: "65px", color: "red"}}></DangerousIcon>
+          </div>
         </Dialog>
       )
     };
@@ -113,8 +109,8 @@ const WebcamCapture = () => {
     }
 
     const handleClose = (value) => {
-    setOpen(false);
-    setSelectedValue(value);
+      setOpen(false);
+      setSelectedValue(value);
     };
 
     return (
@@ -135,22 +131,12 @@ const WebcamCapture = () => {
         {webCamOn && <Button onClick={capture} style={{backgroundColor: "#613DC1"}}>Capture photo</Button>}
         <div>
           {imgSrc && (<img src={imgSrc}/>)}
-          {isValid && 
-            <SimpleDialog
-              selectedValue={selectedValue}
-              open={open}
-              onClose={handleClose}
-            />
-          }
-          {!isValid && 
-            <SimpleDialog2
-              selectedValue={selectedValue}
-              open={open}
-              onClose={handleClose}
-            />
-          }
+          <SimpleDialog
+            selectedValue={selectedValue}
+            open={open}
+            onClose={handleClose}
+          />
         </div>
-          <h2>{isValid}</h2>
       </div>
     );
 };
