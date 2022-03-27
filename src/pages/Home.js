@@ -98,10 +98,10 @@ const Home = () => {
   }
 
   const steps = [
-    'Mar 24th',
     'Mar 25th',
     'Mar 26th',
-    'Mar 27th'
+    'Mar 27th',
+    'Mar 28th'
   ]
   
   return (
@@ -116,7 +116,7 @@ const Home = () => {
         Your progress: {users.length != 0 ? users[user.uid].TotalPoints : ""} <DiamondIcon style={stylingObject.points}/>
       </p>
       <Stepper 
-        activeStep={3} 
+        activeStep={2} 
         alternativeLabel
         style={stylingObject.progress}
       >
