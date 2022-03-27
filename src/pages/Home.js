@@ -7,8 +7,7 @@ import { StepLabel, Stepper, Step } from "@mui/material";
 import DiamondIcon from "@mui/icons-material/Diamond";
 import NavBar from "../components/NavBar"
 import FoodItem from "../components/FoodItem"
-import Grid from '@mui/material/Grid';
-import { fontSize } from "@mui/system";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const stylingObject = {
   bannerContainer: {
@@ -46,6 +45,23 @@ const stylingObject = {
     fontSize: "30px"
   }
 }
+
+const theme = createTheme({
+  components: {
+    MuiStepIcon: {
+      styleOverrides: {
+        root: {
+          "&.Mui-completed": {
+            color: "#613DC1"
+          },
+          "&.Mui-active": {
+            color: "#613DC1"
+          }
+        }
+      }
+    }
+  }
+});
 
 const Home = () => {
   const { user, logout } = useUserAuth();
@@ -98,14 +114,14 @@ const Home = () => {
   }
 
   const steps = [
-    'Mar 24th',
     'Mar 25th',
     'Mar 26th',
-    'Mar 27th'
+    'Mar 27th',
+    'Mar 28th'
   ]
   
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <div style={stylingObject.bannerContainer}>
         Welcome Back, {users.length != 0 ? users[user.uid].FirstName : ""}<br/>
         {/* Temp homepage Hack Your Learning 2022 Hackathon<br />
@@ -113,10 +129,10 @@ const Home = () => {
         First breakfast recipe name:{recipes.length != 0 ? recipes.Breakfast[0].RecipeName : ""} */}
       </div>
       <p className="progress-count">
-        Your progress: 75 <DiamondIcon style={stylingObject.points}/>
+        Your progress: {users.length != 0 ? users[user.uid].TotalPoints : ""} <DiamondIcon style={stylingObject.points}/>
       </p>
       <Stepper 
-        activeStep={3} 
+        activeStep={2} 
         alternativeLabel
         style={stylingObject.progress}
       >
@@ -138,7 +154,7 @@ const Home = () => {
       <br></br>
       <div style={{display:"flex", gap: "20px", overflowX: "auto", padding: "10px"}}>
         {recipes.Breakfast.map((item, index) => 
-            <FoodItem recipe={item}></FoodItem>
+            <FoodItem recipe={item} mealType="Breakfast"></FoodItem>
         )}
       </div>
       <br></br>
@@ -148,7 +164,7 @@ const Home = () => {
       <br></br>
       <div style={{display:"flex", gap: "10px", overflowX: "auto", padding: "10px"}}>
         {recipes.Lunch.map((item, index) => 
-            <FoodItem recipe={item}></FoodItem>
+            <FoodItem recipe={item} mealType="Lunch"></FoodItem>
         )}
       </div>
       <br></br>
@@ -158,7 +174,7 @@ const Home = () => {
       <br></br>
       <div style={{display:"flex", gap: "10px", overflowX: "auto", padding: "10px"}}>
         {recipes.Dinner.map((item, index) => 
-            <FoodItem recipe={item}></FoodItem>
+            <FoodItem recipe={item} mealType="Dinner"></FoodItem>
         )}
       </div>
       <br></br>
@@ -167,7 +183,7 @@ const Home = () => {
       <div>
         <NavBar />
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

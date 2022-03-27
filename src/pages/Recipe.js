@@ -6,11 +6,25 @@ import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import { IconButton } from "@mui/material";
 import { useState } from "react";
 import { get, getDatabase, ref, child } from "firebase/database";
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 const stylingObject = {
-  imageContainer: {
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "20px"
+  },
+  subtitle: {
+    color: "#613DC1",
+    fontSize:"35px",
+    fontWeight:"500"
+  },
+  cameraContainer: {
+    textAlign: "center",
     width: "100%",
-    height: "30px"
+    display: "flex",
+    justifyContent: "center",
   }
 }
 
@@ -64,62 +78,37 @@ const Recipe = (props) => {
     })
   };
 
+  const handleClick = (URL) =>{
+    navigate(URL);
+  }
+
   function cameraClick(){
     navigate("/uploadphoto")
   }
 
   useEffect(() => {
-    console.log("asd");
     getRecipe();
   }, []);
 
-  console.log(recipe.Instructions);
   return (
-    <div>
-      {!loading ? <div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-  
-
-        <h1>{recipe.RecipeName}</h1>
+    <React.Fragment>
+      {!loading ?
+      <div style={stylingObject.container}>
+        <ChevronLeftIcon 
+        sx={{fontSize:'70px', mr: 50}}
+        onClick={() => handleClick("/")}
+        style={{marginTop:"20px", position: "relative", left: "-20px"}}
+        />
+        <div style={{fontSize:"2.2em", fontWeight:"900"}}>{recipe.RecipeName}</div>
         <div style={stylingObject.imageContainer}>
-          <img src={recipe.thumbnail}></img>
+          <img src={recipe.thumbnail} width="100%" style={{borderRadius:"10%", boxShadow: "rgba(149, 157, 165) 0px 8px 24px"}}></img>
         </div>
 
-        <h3>Ingredients</h3>
+        <div style={stylingObject.subtitle}>Ingredients</div>
         {Ingredients.map((item, index) => {
           return (<h5>{item.quantity} {item.name}</h5>)
         })}
-        <h3>Nutrition</h3>
+        <div style={stylingObject.subtitle}>Nutrition</div>
         <h5>Calories: 250</h5>
         <h5>Protein: 7.4g</h5>
         <h5>Carbohydrates: 25mg</h5>
@@ -127,17 +116,21 @@ const Recipe = (props) => {
         <h5>Cholestrol: 110.7mg</h5>
         <h5>Sodium: 235mg</h5>
 
-        <h1>{loading}</h1>
-        {!loading ? recipe.Instructions.map((item, index) => {
-          return (<h5>{item}</h5>)
-        }) : null}
+        <div style={stylingObject.subtitle}>Instructions</div>
+        <div style={{textAlign: "left"}}>
+          {!loading ? recipe.Instructions.map((item, index) => {
+            return (<h5 style = {{marginBottom:"25px"}}>{item}</h5>)
+          }) : null}
+        </div>
 
-        <IconButton aria-label="camera" onClick={cameraClick}>
-          <CameraAltIcon/>
-        </IconButton>
-      </div> : null}
-    </div>
-
+        <div style={stylingObject.cameraContainer}>
+          <IconButton aria-label="camera" onClick={cameraClick} style={{background:"#613DC1", marginBottom: "40px", width: "75px", height: "75px", boxShadow: "rgba(149, 157, 165) 0px 8px 24px"}}>
+            <CameraAltIcon style={{color:"white", width: "35px", height: "35px"}}/>
+          </IconButton>
+        </div>
+      </div> 
+      : null}
+    </React.Fragment>
   )
 };
 
