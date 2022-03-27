@@ -83,7 +83,7 @@ const Recipe = (props) => {
   }
 
   function cameraClick(){
-    navigate("/uploadphoto")
+    navigate(`/uploadphoto/?name=${recipeParam}`);
   }
 
   useEffect(() => {

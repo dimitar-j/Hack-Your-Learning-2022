@@ -1,7 +1,7 @@
 const http = require("http");
 const app = require("./index");
 
-const port = "3000";
+const port = "3001";
 
 const onError = error => {
     if (error.syscall !== "listen") {
