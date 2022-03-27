@@ -113,7 +113,7 @@ const Home = () => {
         First breakfast recipe name:{recipes.length != 0 ? recipes.Breakfast[0].RecipeName : ""} */}
       </div>
       <p className="progress-count">
-        Your progress: 75 <DiamondIcon style={stylingObject.points}/>
+        Your progress: {users.length != 0 ? users[user.uid].TotalPoints : ""} <DiamondIcon style={stylingObject.points}/>
       </p>
       <Stepper 
         activeStep={3} 
