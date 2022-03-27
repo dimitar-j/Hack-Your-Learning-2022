@@ -13,7 +13,7 @@ import ProtectedRoute from './pages/ProtectedRoute';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{padding: "0px 20px"}}>
       <Container>
         <Row>
           <Col>

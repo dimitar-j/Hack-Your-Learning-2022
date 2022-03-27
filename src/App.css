@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 .App-logo {
@@ -39,11 +40,7 @@
 
 body {
   background-color: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   width: 100%;
-  align-items: center;
   height: 100vh;
 }
 
