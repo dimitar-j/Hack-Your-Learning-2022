@@ -7,7 +7,7 @@ function FoodCard(props) {
     return(
         <>
             <div>
-                cock!
+                
             </div>
         </>
     )

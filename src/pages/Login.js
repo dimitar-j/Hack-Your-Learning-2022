@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import Button from '@mui/material/Button';
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../context/UserAuthContext";
 
@@ -35,14 +35,19 @@ const Login = () => {
     }
   };
 
+  const stylingObject = {
+    button: {
+      backgroundColor: '#613DC1'
+    }
+  }
+
   return (
     <>
       <div className="p-4 box">
-        <LockIcon></LockIcon><br/>
-        <h2 className="mb-3">Welcome to DuoChef</h2>
+        <img src="./banner.png" className="banner-image" width="300"/>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Control
               type="email"
               placeholder="Email address"
@@ -59,7 +64,7 @@ const Login = () => {
           </Form.Group>
 
           <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
+            <Button variant="contained" style={stylingObject.button} type="Submit">
               Log In
             </Button>
           </div>

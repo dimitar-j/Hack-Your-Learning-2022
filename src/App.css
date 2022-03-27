@@ -92,6 +92,11 @@ body {
   text-align: right;
 }
 
-.back-button{
-  
+.icon-purple {
+  color: '#613DC1';
+}
+
+.banner-image {
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
