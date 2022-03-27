@@ -15,7 +15,9 @@ function NavBar() {
     const stylingObject = {
         navbar:{
             backgroundColor: '#4E148C',
-            padding: '15px'
+            padding: '15px',
+            position: 'fixed',
+            bottom: 5
         },
         iconBig:{
             color: '#FAFAFA',
@@ -32,7 +34,7 @@ function NavBar() {
             <div className='navbar'>
                 <BottomNavigation 
                     sx={{
-                        width: '85%', 
+                        width: '95%', 
                         borderRadius: 3,
                         boxShadow: 3
                     }} 

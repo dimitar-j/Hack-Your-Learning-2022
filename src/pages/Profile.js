@@ -29,9 +29,12 @@ const Profile = () => {
       color: '#613DC1'
     },
     profile: {
+      fontSize: '150px',
       color: '#613DC1'
     },
     button: {
+      width: '200px',
+      height: '50px',
       backgroundColor: '#613DC1'
     }
   }
@@ -42,7 +45,7 @@ const Profile = () => {
         sx={{fontSize:'70px', mr: 50}}
         onClick={() => handleClick("/")}
       />
-      <AccountCircleIcon data-testid="AccountCircleIcon" style={stylingObject.profile} sx={{fontSize:100}} />
+      <AccountCircleIcon data-testid="AccountCircleIcon" style={stylingObject.profile} />
       <br/>
       Ajay Arumugam
       75 <DiamondIcon style={stylingObject.points}/>
