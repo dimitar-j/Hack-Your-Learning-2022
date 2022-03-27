@@ -5,6 +5,10 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import IconButton from '@mui/material/IconButton';
+import CardActions from '@mui/material/CardActions';
 
 function FoodCard() {
     return(
@@ -26,11 +30,16 @@ function FoodCard() {
                 alt="Rib Eye Steak"
             />
             <CardContent>
-                <Typography variant="body2" color="text.secondary">
-                    Rib eye is not a cheap cut of steak—we’ll just get that one out of the way right at the start. 
-                    This grilled rib eye recipe is luxurious, it’s a splurge any which way you slice it. 
-                    And when you shell out your hard-earned money for a fancy cut of steak, you want to be sure that you 
-                    absolutely cook it perfectly and serve it just-so. 
+                <CardActions disableSpacing>
+                    <IconButton style={{ textAlign: 'left' }} aria-label="add to favorites">
+                        <FavoriteIcon />
+                    </IconButton>
+                    <IconButton aria-label="share">
+                        <ShareIcon />
+                    </IconButton>
+                </CardActions>
+                <Typography variant="body4">
+                    Brian Nguyen made Rib Eye Steaks! Yummy!
                 </Typography>
             </CardContent>
             </Card>
