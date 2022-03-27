@@ -48,7 +48,7 @@ const Profile = () => {
       />
       <AccountCircleIcon data-testid="AccountCircleIcon" style={stylingObject.profile} />
       <br/>
-      Ajay Arumugam
+      Dimitar Janevski
       75 <DiamondIcon style={stylingObject.points}/>
       <br/>
       <br/>
