@@ -17,7 +17,7 @@ function NavBar() {
             backgroundColor: '#4E148C',
             padding: '15px',
             position: 'fixed',
-            bottom: 5
+            bottom: 20
         },
         iconBig:{
             color: '#FAFAFA',
@@ -38,8 +38,7 @@ function NavBar() {
                         borderRadius: 3,
                         boxShadow: 3
                     }} 
-                    style={stylingObject.navbar
-                }>
+                    style={stylingObject.navbar}>
                     <BottomNavigationAction
                         onClick={() => handleClick("/Feed")}
                         icon={<ArticleIcon style={stylingObject.iconSmall}/>} 
