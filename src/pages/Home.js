@@ -7,6 +7,7 @@ import { get, getDatabase, ref, child } from "firebase/database";
 import db from "../firebaseConfig";
 import NavBar from "../components/NavBar"
 import FoodItem from "../components/FoodItem"
+import Grid from '@mui/material/Grid';
 
 const stylingObject = {
   bannerContainer: {
@@ -78,7 +79,6 @@ const Home = () => {
   if (loading) {
     return (
       <div>
-        
       </div>
     )
   }
@@ -98,18 +98,35 @@ const Home = () => {
       <div style={stylingObject.subtitle}>
         Breakfast
       </div>
-      {recipes.Breakfast.map((item, index) => 
-        <div key={index}>{item.RecipeName}</div>
-      )}
-
+      <br></br>
+      <div style={{display:"flex", gap: "20px", overflowX: "auto", padding: "10px"}}>
+        {recipes.Breakfast.map((item, index) => 
+            <FoodItem recipe={item}></FoodItem>
+        )}
+      </div>
       <br></br>
       <div style={stylingObject.subtitle}>
         Lunch
       </div>
       <br></br>
+      <div style={{display:"flex", gap: "10px", overflowX: "auto", padding: "10px"}}>
+        {recipes.Lunch.map((item, index) => 
+            <FoodItem recipe={item}></FoodItem>
+        )}
+      </div>
+      <br></br>
       <div style={stylingObject.subtitle}>
         Dinner
       </div>
+      <br></br>
+      <div style={{display:"flex", gap: "10px", overflowX: "auto", padding: "10px"}}>
+        {recipes.Dinner.map((item, index) => 
+            <FoodItem recipe={item}></FoodItem>
+        )}
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
       <div className="d-grid gap-2">
         <NavBar />
       </div>
