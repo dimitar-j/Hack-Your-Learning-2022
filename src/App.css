@@ -111,3 +111,19 @@ body {
   font-weight: 500;
   margin-bottom: 30px;
 }
+
+ul.names {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.points {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  top: -121px;
+  right: 25px;
+  position: relative;
+  text-align: right;
+}

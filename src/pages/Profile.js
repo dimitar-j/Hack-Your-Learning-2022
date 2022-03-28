@@ -5,9 +5,12 @@ import { useUserAuth } from "../context/UserAuthContext";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import { useDatabase } from "../context/DatabaseContext";
 
 const Profile = () => {
   const { user, logout } = useUserAuth();
+  const { users } = useDatabase();
+
   const navigate = useNavigate();
 
   const handleClick = (URL) =>{
@@ -48,8 +51,7 @@ const Profile = () => {
       />
       <AccountCircleIcon data-testid="AccountCircleIcon" style={stylingObject.profile} />
       <br/>
-      Dimitar Janevski
-      150 <DiamondIcon style={stylingObject.points}/>
+      {users[user.uid].FirstName} {users[user.uid].LastName}  {users[user.uid].TotalPoints} <DiamondIcon style={stylingObject.points}/>
       <br/>
       <br/>
       <Button variant="contained" style={stylingObject.button} onClick={handleLogout}>
