@@ -1,5 +1,7 @@
 # DuoChef
 
+This project was completed in 24 hours during the 2022 Hack Your Learning hackathon. View more here: https://devpost.com/software/duochef?ref_content=user-portfolio&ref_feature=in_progress
+
 ## Inspiration
 Through our own experiences, we are lovers of food delivery services. As university students, we've all experienced the feeling of being too lazy to cook and love to open up DoorDash and get food delivered in 20 minutes. While we know that ordering and eating fast food is bad for you, there's simply no other viable alternative that is convenient. In order to encourage not only ourselves but others, we created DuoChef. 
 
