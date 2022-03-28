@@ -23,7 +23,7 @@ One of the biggest challenges we ran into was the styling of the components. Eve
 4. Creating a positive work environment!
 
 ## What we learned
-1. build websites using React, HTML, CSS, Figma, Firebase and Javascript
+1. Build websites using React, HTML, CSS, Figma, Firebase and Javascript
 2. How to create a high-quality product in a short time frame through prototyping
 3. Styling and CSS is very hard! 
 
