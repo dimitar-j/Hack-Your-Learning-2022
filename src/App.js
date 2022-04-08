@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import Feed from "./pages/Feed";
 import WebcamCapture from "./pages/WebcamCapture";
 import { UserAuthContextProvider } from './context/UserAuthContext';
+import { DatabaseContextProvider } from './context/DatabaseContext';
 import ProtectedRoute from './pages/ProtectedRoute';
 
 function App() {
@@ -18,50 +19,53 @@ function App() {
         <Row>
           <Col>
             <UserAuthContextProvider>
-              <Routes>
-                <Route path="/login" element={<Login />}/>
-                <Route path="/signup" element={<Signup/>} />
-                <Route
-                  path="/"
-                  element={
-                  <ProtectedRoute>
-                    <Home/>
-                  </ProtectedRoute>
-                  } 
-                />
-                <Route 
-                  path="/recipe"
-                  element={
-                  <ProtectedRoute>
-                    <Recipe/>
-                  </ProtectedRoute>
-                  } 
-                />
-                <Route 
-                  path="/profile"
-                  element={
-                  <ProtectedRoute>
-                    <Profile/>
-                  </ProtectedRoute>
-                  }
-                />
-                <Route 
-                  path="/feed"
-                  element={
-                  <ProtectedRoute>
-                    <Feed/>
-                  </ProtectedRoute>
-                  } 
-                />
-                <Route 
-                  path="/uploadphoto" 
-                  element={
-                  <ProtectedRoute>
-                    <WebcamCapture/>
-                  </ProtectedRoute>
-                  }
-                />
-              </Routes>
+              <DatabaseContextProvider>
+                <Routes>
+                  <Route path="/login" element={<Login />}/>
+                  <Route path="/signup" element={<Signup/>} />
+                  <Route
+                    path="/"
+                    element={
+                    <ProtectedRoute>
+                      <Home/>
+                    </ProtectedRoute>
+                    } 
+                  />
+                  <Route 
+                    path="/recipe"
+                    element={
+                    <ProtectedRoute>
+                      <Recipe/>
+                    </ProtectedRoute>
+                    } 
+                  />
+                  <Route 
+                    path="/profile"
+                    element={
+                    <ProtectedRoute>
+                      <Profile/>
+                    </ProtectedRoute>
+                    }
+                  />
+                  <Route 
+                    path="/feed"
+                    element={
+                    <ProtectedRoute>
+                      <Feed/>
+                    </ProtectedRoute>
+                    } 
+                  />
+                  <Route 
+                    path="/uploadphoto" 
+                    element={
+                    <ProtectedRoute>
+                      <WebcamCapture/>
+                    </ProtectedRoute>
+                    }
+                  />
+                </Routes>
+
+              </DatabaseContextProvider>
             </UserAuthContextProvider>            
           </Col>
         </Row>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
+import { useDatabase } from "../context/DatabaseContext";
 import { useState } from "react";
 import { get, getDatabase, ref, child } from "firebase/database";
 import { StepLabel, Stepper, Step } from "@mui/material";
@@ -64,54 +65,10 @@ const theme = createTheme({
 });
 
 const Home = () => {
-  const { user, logout } = useUserAuth();
-  const [recipes, setRecipes] = useState([]);
-  const [users, setUsers] = useState([]);
+  const { user } = useUserAuth();
+  const { recipes, users } = useDatabase();
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-
-  function getRecipes(){
-    const db = getDatabase();
-    const dbRef = ref(db);
-    get(child(dbRef, 'Recipes')).then((snapshot) => {
-      if (snapshot.exists()){
-        setRecipes(snapshot.val());
-      }
-      else {
-        console.log("no data");
-      }
-    }).catch((error) => {
-      console.error(error);
-    })
-  };
-  
-  async function getUsers(){
-    const db = getDatabase();
-    const dbRef = ref(db);
-    await get(child(dbRef, 'Users')).then((snapshot) => {
-      if (snapshot.exists()){
-        setUsers(snapshot.val());
-      }
-      else {
-        console.log("no data");
-      }
-    }).catch ((error) => {
-      console.error(error);
-    })
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    getRecipes();
-    getUsers();
-  }, []);
-
-  if (loading) {
-    return (
-      <div>
-      </div>
-    )
-  }
 
   const steps = [
     'Mar 25th',
@@ -124,9 +81,6 @@ const Home = () => {
     <ThemeProvider theme={theme}>
       <div style={stylingObject.bannerContainer}>
         Welcome Back, {users.length != 0 ? users[user.uid].FirstName : ""}<br/>
-        {/* Temp homepage Hack Your Learning 2022 Hackathon<br />
-        Curr email: {user && user.email}<br/>
-        First breakfast recipe name:{recipes.length != 0 ? recipes.Breakfast[0].RecipeName : ""} */}
       </div>
       <p className="progress-count">
         Your progress: {users.length != 0 ? users[user.uid].TotalPoints : ""} <DiamondIcon style={stylingObject.points}/>
